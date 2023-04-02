@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>Temperature Converter</header>
+    <p>
+      <label style="font-size:20px">Farhenite</label>
+      <input style="font-size:20px" type="number" value="0" placeholder="Farhenite" oninput="ConvertTemperature(this.value)" onchange="ConvertTemperature(this.value)">
+    </p>
+    <input id="num">
+    <button type="button" onclick="abc()"> submit</button>
+    <p>
+       Celcius
+       <span id="celcius"></span>
+    </p>
+    <p>
+        Cel
+        <span id="cel"></span>
+    </p>
+  </body>
+</html>

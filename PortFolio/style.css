@@ -1,0 +1,302 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html{
+    overflow-x:hidden;
+}
+body{
+    overflow-x: hidden;
+}
+.nav-bar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    padding:13px 0;
+    background:aliceblue;
+   
+}
+/* ---------------------------------------bugs----------------------------------------------- */
+#shadow{
+    position:fixed;
+    top:0;
+    left:0; 
+   width:100%;
+}
+.navbar-list{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:2rem;
+    font-size:17px;
+    font-weight: bold;
+}
+nav ul li a{
+    color:#000;
+}
+.mobile-navbar{
+    display:inline block;
+}
+.dark{
+    font-size:1.5rem;
+    color:black;
+    padding-right:20px;
+    padding-left:0px;
+}
+.dark-mode-on{
+    background-color: rgb(31, 33, 33);
+    color:white;
+}
+.myname{
+    font-size:2rem;
+    font-weight:bold;
+    position: relative;
+    top:0;
+    left:5rem;
+}
+.img{
+    text-align:center;
+    border-radius: 100%;
+    width:250px;
+    height:auto;
+    position:relative;
+    left:114px;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style:none;
+}
+
+
+/* selecting mobile nav bar to show the hanmburger */   
+/* changing the style of menu */
+.mobile-navbar{
+    display:flex;
+    text-align:center;   
+    
+}
+.mobile-navbar{
+    display:block;
+}
+.mobile-navbar{
+    display:none;
+    background:transparent;
+    cursor:pointer;
+}
+.mobile-navbar-icon{
+    font-size:3rem;
+    font-weight: bold;
+    padding:0 0;
+
+}
+.mobile-navbar-icon[name="close-outline"]{
+    display:none;
+}
+
+
+.container{
+    
+    
+}
+#shadow{
+    box-shadow: 0px 5px 10px rgb(171, 171, 149);
+}
+
+.content{
+      height:85vh;
+}
+footer{
+    height:54vh;
+}
+
+nav ul li a:hover{
+    color:rgb(216, 12, 12);
+    transition: all 0.6s linear;
+}
+
+.about-me{
+    display:flex;
+    justify-content:space-between;
+    gap:120px;
+    padding:45px 90px;
+}
+.about-me-header{
+    padding-top:30px;
+    text-align:center;
+    text-decoration: underline;
+}
+.content{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left:80px;  
+}
+
+.mydetails span{
+    color:red;
+}
+.mydetails{
+    position:relative;
+    left:100px;
+}
+.mybtn{
+    margin:2rem 3rem;
+    font-size:3vh;
+    text-align: center;
+    padding:10px 8px;
+    border:2px solid rgb(249, 249, 249);
+    border-radius:10rem;
+    position: relative;
+    left: 20px;
+    background-color:blueviolet;
+    color:white;
+    transition: all 0.2s linear;
+
+}
+.mybtn:hover,.mybtn:active{
+    transform:scale(1.05);
+    background-color: rgb(103, 21, 141);
+    color:white;
+}
+.myimage img{
+   
+     width:50%;
+    padding:0 12px;  
+    
+    border: none;
+}
+.img-btn{
+    border:2px solid black;
+    border-radius:50%;
+    position: sticky;
+}
+.scrolltoTop img{
+    position:fixed;
+    top:43rem;
+    left:90rem;
+    width: 50px;
+    text-align: center;
+    z-index:1;
+}
+#shadow{
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+.hidden{
+    position: sticky;
+    top:0;
+
+}
+.hide{
+    display:none;
+}
+.darkMode{
+    background-color: #292929;
+    color:white;
+}
+/* .about-me{
+    margin:30px 100px;
+    height: 30vh;
+} */
+.about-me h1{
+    text-align:center;
+    text-decoration: underline;
+}
+.about-me p{
+    font-size:3vh;
+    margin: 20px;
+}
+.my-image{
+    width:250px;
+    height:auto;
+}
+.skils-container{
+    padding:12px;
+}
+.myskills{
+    margin:4px;
+    width:242px;
+    height:20px;
+    
+}
+.skill-item{
+    display:flex;
+    align-items:center;
+    color:black;
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
+    font-weight:bold;
+}
+.seventy-five{
+    background-color:purple;
+}
+.sixty{
+    background-color:red;
+}
+.fourty-five{
+    background-color:blue;
+}
+.fifty-five{
+    background-color:green;
+}
+
+.mobile-navbar{
+    /* display:none; */
+   width:4rem;
+   height:4rem;
+   color:rgb(31, 26, 26);
+}
+@media only screen and (max-width:980px){
+    .mobile-navbar{
+        display:block;
+        z-index:999;
+        border:3px solid black;
+        color:black;
+    }
+    .navbar{
+        /* display:none; */
+        width:100%;
+        height:100vh;
+        background:white;
+        position:absolute;
+        top:0;
+        left:0;
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+        /* flex direction working in here because we have to access only child element through his parent element */
+
+        /* to get this transition */
+        transform:translateX(100%);
+        transition:all 0.5s linear;
+
+        opacity:0;
+        visibility: hidden;
+        pointer-events:none;
+
+    }
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+    .active .navbar{
+        transform:translateX(0);
+        opacity:1;
+        visibility: visible;
+    }
+    .active .mobile-navbar .mobile-navbar-icon[name="close-outline"]{
+        display:block;
+    }
+    .active .mobile-navbar .mobile-navbar-icon[name="menu-outline"]{
+        display:none;
+    }
+}
+
