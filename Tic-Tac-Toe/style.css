@@ -1,0 +1,93 @@
+/* nav section */
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+nav {
+  background: #070a52;
+  color: #f1f1f1;
+}
+nav ul {
+  list-style-type: none;
+}
+nav {
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #f45050;
+  padding-top: 90px;
+  height: 70vh;
+}
+.Container {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+  /* justify-items:center; */
+}
+.box {
+  border: 2px solid black;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: #dccdef;
+}
+.gameInfo {
+  width: 20%;
+  margin: 0 100px;
+}
+.image img {
+  width:0;
+  transition: width 1s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+#reset{
+  margin: 20px 40px;
+  padding: 10px 20px;
+  border: 2px solid aqua;
+  border-radius:10px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.6);
+  background: aqua;
+  color: blue;
+  cursor: pointer;
+}
+#reset:hover{
+  transform: scale(1.05);
+  transition: all 0.2s ease-in;
+}
+.info{
+  font-size:20px;
+  margin-left:35px;
+  margin-top:50px;
+}

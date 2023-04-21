@@ -1,48 +1,54 @@
-//smooth scrolling
-
-const scrolltoTop = document.querySelector('.scrolltoTop');
-const navbar  = document.querySelector('.nav-bar');
-const scrollTop = ()=>{
-    navbar.scrollIntoView({
-        behavior:"smooth"
-    });
-}
-// scrolltoTop.addEventListener('click',scrollTop())
-
-//navbar styling
-
-window.addEventListener('scroll',function(){
-    let nav_bar = document.getElementsByClassName('nav-bar');
-    if(window.pageYOffset>0){
-        nav_bar.classList.add('hidden');
-    }
-    else{
-        nav_bar.classList.remove('hidden');
-    } 
-
-})
-
-
-//Mobile view
-const mobileNavbar= document.querySelector('.mobile-navbar');
-const nav_header = document.querySelector('.nav-bar');
-const toggleNavbar = ()=>{
-    // console.log('hi');
-    nav_header.classList.toggle('active');
+// sticky navigation bar
+window.onscroll = function () {
+  stickyNavbar();
 };
+const header = document.querySelector(".header");
+const sticky = header.offsetTop;
+function stickyNavbar() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 
-mobileNavbar.addEventListener('click',toggleNavbar)
+//skill part
 
-// dark mode
+const education = document.querySelector(".education");
+const skills = document.querySelector(".skills");
+const eduDetails = document.querySelector(".education-details");
+var tablinks = document.getElementsByClassName("tab-link");
+var tabcontents = document.getElementsByClassName("table-content");
+var skillDetails = document.querySelector(".skills-details");
 
-const dark=document.querySelector('.dark');
-const container = document.querySelector('.container');
-const lightIcon = document.querySelector('.light-icon');
-const darkIcon = document.querySelector('.dark-icon');
-dark.addEventListener('click',()=>{
-    container.classList.toggle('dark-mode-on');
-    lightIcon.classList.toggle('hide');
-    darkIcon.classList.toggle('hide');
+//
 
+function opentab(tabname) {
+  for (x of tablinks) {
+    x.classList.remove("active-link");
+  }
+  for (x of tabcontents) {
+    x.classList.remove("active-tab");
+  }
+  document.addEventListener("click", function (event) {
+    event.target.classList.add("active-link");
+    k;
+  });
+  document.getElementById(tabname).classList.add("active-tab");
+}
 
-})
+const hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", function () {
+  let navBar = document.querySelector(".nav-bar");
+  navBar.classList.toggle("active");
+});
+
+const mydetails = document.querySelector(".mydetails");
+const circularImage = document.querySelector(".circular-image");
+const content = document.querySelector(".content");
+// responsive content section
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.body.offsetWidth <= 768) {
+    content.insertBefore(circularImage, mydetails);
+  }
+});
